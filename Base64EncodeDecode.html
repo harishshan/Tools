@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<table style="border-collapse:separate;border-spacing:0 5px;">
+	<tr>
+		<td>
+			<textarea id="originalData" rows="15" cols="75"></textarea>
+		</td>
+	</tr>
+	<tr>
+		<td align="center">
+			<button onclick="encode();" class="btn btn-success">Encode</button>
+			<button onclick="decode();" class="btn btn-primary">Decode</button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<textarea id="encodedOrDecodedData" rows="15" cols="75"></textarea>
+		</td>
+	</tr>
+</table>
+<script type="text/javascript">
+	function encode(){
+		var originalData = document.getElementById("originalData").value;
+		document.getElementById("encodedOrDecodedData").value = btoa(originalData);
+	}
+	function decode(){
+		var originalData = document.getElementById("originalData").value;
+		document.getElementById("encodedOrDecodedData").value = atob(originalData);
+	}
+</script>
