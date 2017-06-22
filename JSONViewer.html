@@ -185,10 +185,21 @@ a.json-placeholder:hover {
   text-decoration: underline;
 }
 </style>
-<textarea id="json-input" autocomplete="off">
-</textarea>
-<p>
-  Options: <input type="checkbox" id="collapsed" />Collapse nodes <input type="checkbox" id="with-quotes" />Keys with quotes
-  <button id="btn-json-viewer" title="run jsonViewer()" class="btn btn-primary">Transform to HTML</button>
-</p>
+<table>
+<tr>
+<td>
+<textarea id="json-input" autocomplete="off" rows="15" cols="75"></textarea>
+</td>
+</tr>
+<tr>
+<td>
+Options: <input type="checkbox" id="collapsed" /> Collapse nodes <input type="checkbox" id="with-quotes" /> Keys with quotes
+<button id="btn-json-viewer" title="run jsonViewer()" class="btn btn-primary">Transform to HTML</button>
+</td>
+</tr>
+<tr>
+<td>
 <pre id="json-renderer" style="display: none;" style="height: 200px;"></pre>
+</td>
+</tr>
+</table>
