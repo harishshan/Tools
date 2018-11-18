@@ -1,36 +1,19 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <style>
-@media {
-  .container {
-    width: 100%;
-  }
-}
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  width: 100%;
+    max-width: 100%;
 }
 </style>
-<table style="border-collapse:separate;border-spacing:0 5px;">
-	<tr>
-		<td>
-			<textarea id="originalData" rows="15" cols="75"></textarea>
-		</td>
-	</tr>
-	<tr>
-		<td align="center">
-			<button onclick="encode();" class="btn btn-success">Encode</button>
-			<button onclick="decode();" class="btn btn-primary">Decode</button>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<textarea id="encodedOrDecodedData" rows="15" cols="75"></textarea>
-		</td>
-	</tr>
-</table>
+<div class="form-group">
+<textarea class="form-control" id="originalData" rows="15"></textarea>
+<br />
+<div align="center">
+<button class="btn btn-success" onclick="encode();">Encode</button>
+<button class="btn btn-primary" onclick="decode();">Decode</button>
+</div>
+<br />
+<textarea class="form-control" id="encodedOrDecodedData" rows="15"></textarea>
+</div>
 <script type="text/javascript">
 	function encode(){
 		var originalData = document.getElementById("originalData").value;
